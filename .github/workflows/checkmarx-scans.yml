@@ -1,4 +1,4 @@
-name: Checkmarx One Scan on Push
+name: Checkmarx One Scans on Push
 on:
   workflow_dispatch:
 
