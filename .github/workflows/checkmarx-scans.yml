@@ -1,4 +1,4 @@
-name: Checkmarx One Scans on Push
+name: Checkmarx One Scan on PushAdd commentMore actions
 on:
   workflow_dispatch:
 
@@ -18,15 +18,15 @@ jobs:
           # Provide the Tenant for AST portal URL
           cx_tenant: https://us.ast.checkmarx.net
           # Client ID for AST portal authentication
-          cx_client_id: ${{ secrets.CX_CLIENT_ID }}
+          cx_client_id: {{ secrets.CX_CLIENT_ID }}
           # Secret key for AST portal authentication
-          cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+          cx_client_secret: {{ secrets.CS_CLIENT_SECRET }}
           # Select a Checkmarx Project Name
           project_name: ${{ github.repository }}
           # Branch name
           branch: ${{ github.ref }}
           # GitHub API Token
-          additional_params: --scan-types sast,iac-security,sca,container-security,scs
+          additional_params: --scan-types sast,scs
           # Repository name for PR decoration
           repo_name: ${{ github.event.repository.name }}
           # Organization name to create the Pr comment
