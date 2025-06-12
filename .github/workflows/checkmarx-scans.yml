@@ -26,7 +26,7 @@ jobs:
           # Branch name
           branch: ${{ github.ref }}
           # GitHub API Token
-          additional_params: --scan-types sast,container-security,iac-security,scs
+          additional_params: --scan-types sast,iac-security,sca,container-security,scs
           # Repository name for PR decoration
           repo_name: ${{ github.event.repository.name }}
           # Organization name to create the Pr comment
