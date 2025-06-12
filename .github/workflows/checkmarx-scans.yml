@@ -25,7 +25,6 @@ jobs:
           project_name: ${{ github.repository }}
           # Branch name
           branch: ${{ github.ref }}
-          additional_params: --scan-types sast,scs
           # Repository name for PR decoration
           repo_name: ${{ github.event.repository.name }}
           # Organization name to create the Pr comment
